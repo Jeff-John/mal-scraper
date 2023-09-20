@@ -438,7 +438,7 @@ def _convert_json_date(text):
 
     try:
         # Or %d-%m-%y
-        return datetime.strptime(text, '%m-%d-%y').date()
+        return datetime.strptime(text, '%d-%m-%y').date()
     except ValueError:  # pragma: no cover
         # It is likely that MAL has changed their format
         raise ParseError('Unable to parse the date text "%s" from an anime list' % text)
